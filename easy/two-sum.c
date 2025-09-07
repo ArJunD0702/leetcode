@@ -1,7 +1,7 @@
 // Problem: 1. Two Sum
 // Link: https://leetcode.com/problems/two-sum/
 // Time Complexity: O(N^2) 
-// Memory: O(1) 
+// Memory Complexity: O(1) 
 
 
 #include <stdio.h>
