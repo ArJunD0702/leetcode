@@ -1,7 +1,7 @@
 // Problem: 1304. Find N Unique Integers Sum up to Zero
 // Link: https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
-// Time Complexity: 
-// Memory Complexity: 
+// Time Complexity: O(n)
+// Memory Complexity: O(n)
 #include <stdlib.h>
 
 int *sumZero(int n, int *returnSize) {

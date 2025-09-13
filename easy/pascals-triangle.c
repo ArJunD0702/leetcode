@@ -1,3 +1,9 @@
+// Problem: Pascal's Triangle
+// Link: https://leetcode.com/problems/pascals-triangle/
+// Time Complexity: O(n**2)
+// Memory Complexity: O(n**2)
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
