@@ -1,44 +1,40 @@
-#include <stdio.h>
+// Problem: 19. Remove Nth Node From End of List
+// Link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+// Time Complexity: O(n)
+// Memory Complexity: O(1)
+
 #include <stdlib.h>
 
-struct ListNode {
-      int val;
-      struct ListNode *next;
-  };
-
-void print_list(struct ListNode *head) {
-    struct ListNode *cur = head;
-    
-    printf("[");
-    while (cur != NULL) {
-        printf("%d,", cur->val);
-        cur = cur->next;
-    }
-    printf("]\n");
-}
+struct ListNode { //re-defining the struct
+    int val;
+    struct ListNode *next;
+};
 
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
-    if (head == NULL) {
-        return NULL;
+    if (head == NULL || n <= 0) {
+        return head;
     }
 
-    struct ListNode *fast = head, *slow = fast;
-    while (n - 1 > 0) {
-        if (fast == NULL) {
-            return NULL;
-        }
-        n--;
+    struct ListNode dummy = {0, head};
+    struct ListNode *fast = &dummy, *slow = &dummy;
+
+    for (int i = 0; i < n && fast != NULL; ++i) {
         fast = fast->next;
     }
+    if (fast == NULL) {
+        return head; 
+    }
 
-    while (fast != NULL) {
+    while (fast->next != NULL) {
         fast = fast->next;
         slow = slow->next;
     }
 
-    struct ListNode *temp = slow->next;
-    slow->next = slow->next->next;
-    free(temp);
+    struct ListNode *to_delete = slow->next;
+    if (to_delete != NULL) {
+        slow->next = to_delete->next;
+        free(to_delete);
+    }
 
-    print_list(head);
+    return dummy.next;
 }
