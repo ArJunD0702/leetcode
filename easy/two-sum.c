@@ -1,6 +1,6 @@
 // Problem: 1. Two Sum
 // Link: https://leetcode.com/problems/two-sum/
-// Time Complexity: O(N^2) 
+// Time Complexity: O(n^2) 
 // Memory Complexity: O(1) 
 
 #include <stdio.h>
