@@ -1,6 +1,6 @@
 // Problem: 83. Remove Duplicates from Sorted List
 // Link: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-// Time Complexity: O(m + n) 
+// Time Complexity: O(n) 
 // Memory Complexity: O(1) 
  
 
