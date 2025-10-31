@@ -1,5 +1,5 @@
 // Problem: 120. Triangle
-// Link: https://leetcode.com/problems/triangle/description/
+// Link: https://leetcode.com/problems/triangle/
 // Time Complexity: O(n ^ 2)
 // Memory Complexity: O(1)
 
