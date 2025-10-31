@@ -1,3 +1,8 @@
+// Problem: 49. Group Anagrams
+// Link: https://leetcode.com/problems/group-anagrams/
+// Time Complexity: O(n * m * logm)
+// Memory Complexity: O(n * m)
+
 #include <bits/stdc++.h>
 using namespace std;
 
