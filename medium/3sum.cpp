@@ -32,6 +32,13 @@ public:
             }
 
             int l = i + 1, r = n - 1;
+            if ((long long)nums[i] + nums[i+1] + nums[i+2] > 0) {
+                break;
+            }
+            if ((long long)nums[i] + nums[n-2] + nums[n-1] < 0) {
+                continue;
+            }
+            
             while (l < r) {
                 long long sum = nums[i] + nums[l] + nums[r];
 
