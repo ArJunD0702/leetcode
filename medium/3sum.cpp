@@ -10,7 +10,6 @@
  * Space Complexity: O(1) extra space (excluding the result)
  */
 
-
 #include <algorithm>
 #include <vector>
 
