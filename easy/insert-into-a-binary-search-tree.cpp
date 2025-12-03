@@ -34,16 +34,23 @@ public:
         }
 
         TreeNode *cur = root;
-        while (cur) {
+        while (true) {
             if (cur->val > val) {
+                if (!cur->left) {
+                    cur->left = new TreeNode(val);
+                    break;
+                }
                 cur = cur->left;
             }
             else {
+                if (!cur->right) {
+                    cur->right = new TreeNode(val);
+                    break;
+                }
                 cur = cur->right;
             }
         }
 
-        
         return root;
     }
 };
