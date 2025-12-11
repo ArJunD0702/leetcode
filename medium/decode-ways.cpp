@@ -8,7 +8,7 @@
  *   is not '0'. A valid two-digit number (10–26) contributes dp[i-2].
  *
  * Time Complexity:  O(n)
- * Space Complexity: O(n)
+ * Space Complexity: O(1)
  */
 
 #include <bits/stdc++.h>
