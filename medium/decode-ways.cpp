@@ -22,19 +22,21 @@ public:
         }
 
         int n = s.length();
-        vector<int> dp(n + 1, 0);
-        dp[0] = 1;
-        dp[1] = 1;
+        int prev2 = 1;
+        int prev1 = 1;
 
         for (int i = 2; i <= n; i++) {
+            int cur = 0;
             if (s[i - 2] == '1' || (s[i - 2] == '2' && s[i - 1] <= '6')) {
-                dp[i] += dp[i - 2];
+                cur += prev2;
             }
             if (s[i - 1] != '0') {
-                dp[i] += dp[i - 1];
+                cur += prev1;
             }
+            prev2 = prev1;
+            prev1 = cur;
         }
 
-        return dp[n];
+        return prev1;
     }
 };
